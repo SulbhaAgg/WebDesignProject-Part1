@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800&display=swap');
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  font-family: "Poppins", sans-serif;
+}
+
+html{
+  background-color: #03080a;
+}
+section h2 h1{
+  font-family: "Monseratt", sans-serif;
+  text-align: center;
+  height: 200px;
+  color: white;
+  font-size: 20px;
+}
+
+ul {
+  list-style-type: none;
+  overflow: hidden;
+}
+
+.dropdown {
+  float: left;
+  text-align: center;
+}
+a {
+  text-align: center;
+}
+
+.dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 15px;
+  text-decoration: none;
+}
+
+li a:hover{
+  background-color: #45f3ff;
+}
+
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+  color: grey;
+  padding: 14px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #eeeeee;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/*Contact.html*/
+/*.contact-section{
+  background-size:cover;
+  background: #222629;
+  padding: 40px 0;
+}
+
+.contact-section h1{
+  text-align: center;
+  color: #E0E0E0;
+}
+
+.border{
+  width:100px;
+  height: 10px;
+  background: #34495e;
+  margin: 40px auto;
+}
+
+.contact-form{
+  max-width: 600px;
+  margin: auto;
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+.contact-form-text{
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 16px 0;
+  border: 0;
+  background: #111;
+  padding: 20px 40px;
+  outline: none;
+  color: #ddd;
+  transition: 0.5s;
+}
+
+.contact-form-text:hover{
+  box-shadow: 0 0 10px 4px #34495e;
+}
+
+textarea.contact-form-text{
+  resize: none;
+  height:120px;
+}
+
+.contact-form-btn{
+  float: right;
+  border: 0;
+  background: #34495e;
+  padding: 12px 50px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.contact-form-btn:hover{
+  background: #2980b9;
+}*/
+
+
+.body{
+  display: flex ;
+  justify-content: center ;
+  align-items: center ;
+  min-height: 100vh ;
+  background: #03080a;
+}
+
+.container
+{
+  width: 80% ;
+  padding: 20px ;
+}
+
+.container h2
+{
+  width: 100% ;
+  color: #45f3ff ;
+  font-size: 36px ;
+  text-align: center ;
+  margin-bottom: 10px ;
+}
+
+.container .row100
+{
+  position: relative ;
+  width: 100% ;
+  display: grid ;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) ; 
+}
+
+.container .row100 .col
+{
+  position: relative;
+  width: 100% ;
+  padding: 0 10px ;
+  margin: 30px 0 10px ;
+  transition: 0.5s ;
+}
+
+.container .row100 .inputBox 
+{
+  position: relative;
+  width: 100% ;
+  height: 40px ;
+  color: #45f3ff ;
+}
+
+.container .row100 .inputBox input,
+.container .row100 .inputBox.textarea textarea
+{
+  position: absolute ;
+  width: 100% ;
+  height: 100% ;
+  background: transparent ;
+  box-shadow: none ;
+  border: none ;
+  outline: none;
+  font-size: 18px ;
+  padding: 0 10px ;
+  z-index: 1 ;
+  color: #000 ;
+}
+
+.container .row100 .inputBox .text
+{
+  position: absolute ;
+  top: 0 ;
+  left: 0 ;
+  line-height: 40px ;
+  font-size: 18px ;
+  padding: 0 10px ;
+  display: block ;
+  transition: 0.5s ;
+  pointer-events: none ;
+}
+
+.container .row100 .inputBox input:focus + .text,
+.container .row100 .inputBox input:valid + .text
+{
+  top: -35px ;
+  left: -10px ;
+}
+
+.container .row100 .inputBox .line
+{
+  position: absolute ;
+  bottom: 0 ;
+  display: block ;
+  width: 100% ;
+  height: 2px ;
+  background: #45f3ff ;
+  transition: .5s ;
+  border-radius: 2px ;
+  pointer-events: none ;
+}
+
+.container .row100 .inputBox input:focus ~ .line ,
+.container .row100 .inputBox input:valid ~ .line
+{
+  height: 100% ;
+}
+
+.container .row100 .inputBox.textarea
+{
+  position: relative ; 
+  width: 100% ;
+  height: 100px ;
+  padding: 10px 0 ;
+}
+
+.container .row100 .inputBox.textarea textarea
+{
+  height: 100% ;
+  resize: none ;
+}
+
+.container .row100 .inputBox textarea:focus + .text,
+.container .row100 .inputBox textarea:valid + .text
+{
+  top: -35px ;
+  left: -10px ;
+}
+
+.container .row100 .inputBox textarea:focus ~ .line ,
+.container .row100 .inputBox textarea:valid ~ .line
+{
+  height: 100% ;
+}
+
+input[type="submit"]
+{
+  border: none ;
+  padding: 7px 35px ;
+  cursor: pointer ;
+  outline: none ;
+  background: #45f3ff ;
+  color: #000 ;
+  font-size: 18px ;
+  border-radius: 2px ;
+}
+
+.photo img
+{
+  margin-top: 40px;
+  margin-left: 12%;
+  border: 1px solid white ;
+  border-radius: 50% ;
+  transition: .5s;
+  float: left ;
+}
+
+.photo img:hover
+{
+  box-shadow: 0px 0px 20px #45f3ff ;
+}
+
+.masthead-intro {
+  margin-top: 4% ;
+  /* Layout Declarations */
+  margin-bottom: 0.1em;
+  /* Typography Declarations */
+  font-size: 2em;
+  color: white ;
+}
+
+.masthead-heading {
+  /* Layout Declarations */
+  color: #45f3ff;
+  margin-top: -0.2em;
+  /* Typography Declarations */
+  font-weight: bold;
+  font-size: 6em;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.introduction-section
+{
+  border-top: 4px solid #45f3ff;
+}
+.introduction-section,
+.location-section,
+.questions-section {
+  color: white ;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+}
+
+.introduction-section > p,
+.location-section > p,
+.questions-section,
+.content-footer > p {
+    /* Typography Declarations */
+    color: white ;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+}
+
+h2 {
+  /* Typography Declarations */
+  font-family: "Gentium Book Basic", Georgia, serif;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.questions-section > h2 {
+  font-family: "Gentium Book Basic", Georgia, serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  /* Layout */
+  margin: 2em 0 1em 0;
+}
+
+.thank
+{
+  margin-top: 4% ;
+  font-variant: small-caps;
+  font-size: 1.2em;
+  margin-left: 14%;
+  color: white ;
+
+}
+section > h1 {
+  margin-top: 2em;
+}
+
+.content-footer,
+.masthead-heading,
+.masthead-intro {
+  text-align: center;
+}
+
+.content-footer {
+  margin: 50px 0;
+  padding: 20px 0;
+  text-align: center;
+  background-color: #45f3ff;
+  text-decoration: none;
+}
+
+.social > li {
+  display: inline-block;
+  margin: 0 5px;
+}
+.content-footer > p {
+  color: #F7EDE1;
+}
+a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #F1C863;
+}
+  
+@media only screen and (max-width: 500px) 
+{
+    .masthead {
+        padding: 3em 0;
+    }
+    .masthead-heading {
+        font-size: 3em;
+    }
+    .content-footer {
+        padding: 2em 2.5em;
+  }
+}
